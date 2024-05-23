@@ -11,4 +11,4 @@ const accountSchema: Schema = new mongoose.Schema({
   products: { type: [String], required: true },
 });
 
-export const AccountModel = mongoose.model<Account>("Account", accountSchema);
+export const AccountModel = mongoose.models.Account || mongoose.model<Account>("Account", accountSchema);
